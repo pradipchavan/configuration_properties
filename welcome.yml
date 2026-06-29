@@ -1,1 +1,17 @@
-msg: Welcome to Microservice-RestAPI Development
+##If configuration is not required add
+#spring.config.import=optional:configserver: instead
+
+#configuration is required
+
+#To disable this check, set 
+#spring.cloud.config.enabled=false or 
+#spring.cloud.config.import-check.enabled=false.
+
+server.port=8081
+
+#Admin server url
+spring.boot.admin.client.url=http://localhost:1111
+
+##Actuator endpoints enable
+management.endpoints.web.exposure.include=*, refresh
+
